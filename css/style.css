@@ -1,0 +1,45 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo, .hamburger img {
+    height: 50px; /* This sets both the logo and the hamburger icon to the same height */
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0; /* Removes padding to ensure alignment */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 60px; /* Adjust this based on your actual navbar height */
+    width: 100%;
+    text-align: center;
+}
+
+.nav-link {
+    display: block;
+    color: blue;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    background-color: #f0f0f0;
+}
+
