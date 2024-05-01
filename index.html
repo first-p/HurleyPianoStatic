@@ -10,19 +10,23 @@ File: index.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    <title>Hurley Piano Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <img src="img/logo.png" alt="Logo" class="logo">
+            <a href="index.html">  <!-- Link pointing to the homepage -->
+                <img src="img/logo.png" alt="Logo" class="logo">  <!-- Your logo -->
+            </a>
             <button class="hamburger" id="hamburger">
                 <img src="img/hamburger.png" alt="Menu">
             </button>
             <ul class="dropdown-menu" id="nav-menu">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#" class="nav-link">Music Lessons</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="html/music-lessons.html" class="nav-link">Music Lessons</a>
                 <a href="#" class="nav-link">Video Lessons</a>
                 <a href="#" class="nav-link">About</a>
                 <a href="#" class="nav-link">Blog</a>
@@ -106,9 +110,21 @@ File: index.html
             <img src="img/drum-tile-home.png" 
             alt="Rhythm unleashed: Explore beats, fills, and grooves in dynamic drumming.">
         </div>
-        <div class="centered-form">
-            <img src="img/get-free-book-form-home.png" 
-            alt="Rhythm unleashed: Explore beats, fills, and grooves in dynamic drumming.">
+        <div class="centered-tile-full-width-purple">
+                <h2>Get Your <br> <u>FREE</u> Book</h2>
+                <p>Teach your toddler music even though you never learned music yourself. <br> <br>
+                Get your <b>FREE</b> starter book and teach your little one music most efficiently.</p>
+                <form class="inquiry-form">
+                    <label for="full-name">Full Name</label> <br>
+                    <input type="text" id="full-name" name="fullname" placeholder="Hurley Piano"><br>
+                    <br>
+            
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email" name="email" placeholder="you@email.com"><br>
+                
+            
+                    <button type="submit">SUBMIT</button>
+                </form>
         </div>
 
         <h2> Why Hurley Piano?</h2>
@@ -131,9 +147,82 @@ File: index.html
             We have tons of video tutorials that can help the kids to learn music. Join our monthly subscription, and you will get access to many videos like this!">
         </div>
         
+        <h2>Our Interactive Games</h2>
+        <div class="centered-tile-background">
+            <img src="img/gojuns-home.png" 
+            alt="gojuns adventure game">
+            <h2>GOJUN'S ADVENTURE</h2>
+            <p>In This Thrilling And Strategic Board Game, You Have The Option To Play Solo Or Challenge A Friend To A Friendly Match.
+                 Roll The Dice And Navigate Through The Board, Using Special Abilities Like JumpForwards And Knockback To Outsmart Your Opponent.</p>
+        </div>
+        <div class="centered-tile-background">
+            <img src="img/chime-candy-home.png" 
+            alt="chime candy game">
+            <h2>CHIME CANDY 1</h2>
+            <p>In This Game Players Guide Musical Fish Across The Screen Into Designated Note Slots That Correspond With Piano Sheet Music.
+                Each Successful Placement Emits The Sound Of A Musical Note</p>
+        </div>
+        <div class="button-container">
+            <a href="#" class="button play-now">Play Now</a>
+        </div>
 
-</div>
-<!--End of class:homepage-content-->
+        <h2>About Us</h2>
+        <div class="centered-tile-background-1">
+            <img src="img/live-lesson-home.png" 
+            alt="live piano lesson with child ">
+            <p>Hurley Piano is a leading piano methodology to the special needs community. Richard Hurley has developed a highly regarded Black Keys Exercises designed to introduce the world of the keyboard to the most challenging of special need students. Based in Austin Texas, a city that is a hub of special needs innovation, Hurley Piano has drawn upon the expertise of the city’s leading special needs researchers to test and challenge this methodology. Sign up for free introductory videos and blogs, follow the video based conversation around the challenges facing our special needs kiddos today.</p>
+            <div class="button-container">
+                    <a href="#" class="button book-consultation">Book Free Consultation</a>
+                    <a href="#" class="button about-me">More About Me</a>
+                </div>
+        </div>
+
+        <div class="centered-tile-double">
+            <img src="img/special-needs-student.png" 
+            alt="Specail needs students include ADHD, Asperger Syndrome, Autism, Down Syndrome, Dyscalculia, Dyselexia, Sensory Processing Disorder">
+        </div>
+        <div class="centered-tile-full-width">
+            <form class="inquiry-form">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="fullname" placeholder="Full Name">
+        
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email">
+        
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone">
+        
+                <p>Which music lessons your family is interested in?</p>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="piano" name="lesson_type" value="Piano">
+                    <label for="piano">Piano Lessons</label>
+        
+                    <input type="checkbox" id="guitar" name="lesson_type" value="Guitar">
+                    <label for="guitar">Guitar Lessons</label>
+        
+                    <input type="checkbox" id="drums" name="lesson_type" value="Drums">
+                    <label for="drums">Drum Lessons</label>
+                </div>
+        
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+            <div class="centered-tile-full-width-footer">
+                <footer class="contact-footer">
+                    <div class="footer-content">
+                        <a href="https://www.google.com/maps/search/?api=1&query=5209+Duval+Rd,+Austin,+TX+78727" target="_blank" class="footer-link">
+                            <i class="fas fa-map-marker-alt"></i> Address: 5209 Duval Rd, Austin, TX 78727
+                        </a>
+                        <a href="tel:+16315235853" class="footer-link">
+                            <i class="fas fa-phone"></i> Phone: (631) 523-5853
+                        </a>
+                        <a href="mailto:info@hurleypiano.com" class="footer-link">
+                            <i class="fas fa-envelope"></i> Email: info@hurleypiano.com
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        
         
         
     </main>
