@@ -2,7 +2,7 @@
 Author: Fred Butoma
 Hurley Piano New Concept Website
 File: music-lessons.css
- Purpose: Music Lessons Page Styling
+ Purpose: Music Page Styling
 *****************************************/
 
 body {
@@ -17,12 +17,12 @@ body {
 }
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.3em; /* Adjust size as needed */
+    font-size: 2.8em; /* Adjust size as needed */
     margin-top:0px; /* Space above the heading */
 }
 h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8em; /* Smaller than H1 by 15% */
+    font-size: 2.2em; /* Smaller than H1 by 15% */
     text-align: center;
     margin-top: 90px;
 }
@@ -112,18 +112,56 @@ p {
 
 .hero-photo {
     width: 100%; /* Makes the image responsive */
-    max-width: 200px; /* Maximum width to prevent the image from becoming too large */
+    max-width: 800px; /* Maximum width to prevent the image from becoming too large */
     height: auto; /* Maintains aspect ratio */
     display: block; /* Ensures the image is a block element */
     margin: 0 auto; /* Centers the image */
     padding-top: 2em;
 }
 
+/* Hero Content  */
+.centered-tile-full-width-hero {
 
+    max-width: max-content; /* Limits max width to 700px */
+    margin: 0 auto; /* Centers the container horizontally */
+    background-image: url(../img/music-lessons/hero-background.png) ;
+    background-size: cover; /* Covers the entire area of the div, stretching as needed */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents rep
+    padding: 2em 0;  /* Top and bottom padding */
+    max-width: 100%; /* Or any other max-width as necessary */
+    margin: 0 auto; /* Centers the content */
+}
+.centered-tile-full-width-hero h1{
+    font-size: 3em;
+    text-align: center;
+    }
+.centered-tile-full-width-hero h2{
+font-size: 2em;
+}
+
+.centered-tile-full-width-hero img {
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Corrects block level for centering */
+    margin: 0 auto 0; /* Top margin only, centers horizontally */
+}
+
+.centered-tile-full-width-hero form {
+    width: 70%; /* Responsive width */
+    max-width: 700px; /* More specific max-width for forms */
+    display: block; /* Ensures it's treated as a block level element */
+    margin: 2.2em auto 0; /* Adds significant space above the form */
+    padding-bottom: 20px; /* Adds padding at the bottom of the form */
+    background-color: rgba(0, 0, 0, 0.01);
+    padding-bottom: 2em;
+
+}
 .homepage-content h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2em; /* Adjust size as needed */
     margin-top: 20px; /* Space above the heading */
+    text-align: center;
 }
 
 
@@ -133,6 +171,7 @@ p {
     margin-top: 10px; /* Space above the paragraph */
     font-size: 0.9em;
     line-height:1.3em;
+    text-align: center;
 }
 
 
@@ -140,11 +179,17 @@ p {
     display: flex;
     justify-content: space-around; /* Evenly spaces the two buttons */
     margin-top: 20px; /* Space above the button container */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center;   /* Vertically center the content (optional) */
+    flex-direction: row; 
+    
+    
 }
 
 .button {
     cursor: pointer; /* Indicates the images are clickable */
     width: 48%; /* Each button takes up nearly half of the container */
+    max-width: 20em;
 }
 
 .button {
@@ -156,7 +201,7 @@ p {
     text-align: center;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px; /* Slightly smaller font size */
+    font-size: 18px; /* Slightly smaller font size */
     border-radius: 5px; /* Rounded corners */
     border: none; /* No border */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
@@ -194,15 +239,16 @@ p {
 }
 
 .testimonial-box {
-    background-color: #fff; /* Light background for the testimonial box */
+    background-color:rgba(255, 255, 255, 0.7); /* Light background for the testimonial box */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
     width: 100%; /* Makes the image responsive */
-    max-width: 500px; /* Maximum width to prevent the image from becoming too large */
+    max-width: 600px; /* Maximum width to prevent the image from becoming too large */
     height: auto; /* Maintains aspect ratio */
     display: block; /* Ensures the image is a block element */
     margin: 0 auto; /* Centers the image */
     padding: 1EM 1EM;
-    margin-top: 1EM;
+    margin-top: 1.6EM;
+    margin-bottom: 1.6EM;
     border-radius: 20px
     
 }
@@ -213,6 +259,15 @@ p {
     line-height: 1.6;
     font-size: 1em;
     padding: 1em;
+}
+.testimonial-box img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 90%; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    border-radius: 5px;
+    
 }
 
 .star-rating img {
@@ -229,6 +284,7 @@ p {
     font-size: 1.6em; /* Appropriate size for author name */
     text-align: center;
     line-height: 0px;
+
 }
 
 .testimonial-box h3 {
@@ -237,6 +293,22 @@ p {
     color: black;
     font-style: italic;
     text-align: center;
+}
+.testimonial-box h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6em; /* Appropriate size for author name */
+    text-align: center;
+    line-height: 0px;
+}
+.testimonial-box h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6em; 
+    padding-right: 15em;
+    line-height: 0px;
+}
+.testimonial-box ul li{
+    line-height: 1.5em;
+    color: #4f4d4d;
 }
 
 .music-school-stats img{
@@ -386,6 +458,14 @@ p {
     background-color: rgb(75, 45, 225); /* Sets a distinct background color */
     padding-top: 7.5em; /* Adds space at the top inside the container */
     padding-bottom: 9em; /* Adds space at the top inside the container */
+    max-width: max-content; /* Limits max width to 700px */
+    margin: 0 auto; /* Centers the container horizontally */
+    background-size: cover; /* Covers the entire area of the div, stretching as needed */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents rep
+    padding: 2em 0;  /* Top and bottom padding */
+    max-width: 100%; /* Or any other max-width as necessary */
+    margin: 0 auto; /* Centers the content */
 }
 
 .centered-tile-full-width img {
@@ -409,6 +489,15 @@ p {
     text-align: center; /* Optionally center the text */
     margin-left: -5em;
 }
+.centered-tile-full-width h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em; /* Adjust size as needed */
+    margin-top: 20px; /* Space above the heading */
+    text-align: center;
+    color: white;
+
+}
+
 /* Inquiry Form for the blue background form template */
 .inquiry-form {
     background: white;
@@ -465,17 +554,24 @@ p {
 
 /* Purple form  */
 .centered-tile-full-width-purple {
-    width: 100%; /* Ensures it takes the full width available */
-    max-width: max-content; /* Limits max width to 700px */
+    padding-top:5em;
     margin: 0 auto; /* Centers the container horizontally */
-    
-    padding-top: 1.5em; /* Adds space at the top inside the container */
     background-image: url(../img/free-book-form-back-home.png) ;
-    padding-bottom: 3em;;
+    background-size: cover; /* Covers the entire area of the div, stretching as needed */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents rep
+    padding: 2em 0;  /* Top and bottom padding */
+    max-width: 100%; /* Or any other max-width as necessary */
+    margin: 0 auto; /* Centers the content */
 }
+
+
 .centered-tile-full-width-purple h2{
 font-size: 4em;
 }
+.centered-tile-full-width-purple p{
+   text-align: center;
+ }
 
 .centered-tile-full-width-purple img {
     width: 100%; /* Responsive width */
@@ -531,7 +627,7 @@ footer.contact-footer {
 }
 .centered-tile-full-width-footer {
     width: 100%; /* Ensures it takes the full width available */
-    max-width: 700px; /* Limits max width to 700px */
+    max-width: 100%; /* Limits max width to 700px */
     margin: 0 auto; /* Centers the container horizontally */
 
 }
