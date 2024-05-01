@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../img/homepage-background.png'); /* Sets the background image */
+    background-size: cover; /* Ensures the image covers the entire body without repeating */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+}
+
+
+.navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid black; /* Adds a solid black border */
+}
+
+.logo, .hamburger img {
+    height: 50px; /* This sets both the logo and the hamburger icon to the same height */
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0; /* Removes padding to ensure alignment */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 60px; /* Adjust this based on your actual navbar height */
+    width: 100%;
+    text-align: center;
+}
+
+.nav-link {
+    display: block;
+    color: blue;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    background-color: #f0f0f0;
+}
+
+.homepage-content {
+    text-align: center; /* Centers all text and images */
+    max-width: 800px; /* Adjust based on design preference */
+    margin: 0 auto; /* Center the content block */
+    padding: 20px; /* Adds padding around the content */
+}
+
+.centered-photo {
+    width: 70%; /* Makes the image responsive */
+    max-width: 400px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+}
+
+
+.homepage-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; /* Adjust size as needed */
+    margin-top: 20px; /* Space above the heading */
+}
+
+.homepage-content p {
+    font-family: 'Montserrat', sans-serif;
+    color: #333; /* Dark grey text color */
+    margin-top: 10px; /* Space above the paragraph */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around; /* Evenly spaces the two buttons */
+    margin-top: 20px; /* Space above the button container */
+}
+
+.button {
+    cursor: pointer; /* Indicates the images are clickable */
+    width: 48%; /* Each button takes up nearly half of the container */
+}
+
+@media (max-width: 768px) {
+    .button {
+        width: auto; /* Default width based on content and padding */
+        padding: 8px 16px; /* Consistent padding for mobile and desktop */
+        margin: 10px auto; /* Ensures proper spacing */
+        font-size: 14px; /* Consistent font size */
+    }
+
+    .button-container {
+        flex-direction: column; /* Optional: Stack buttons vertically */
+        align-items: center; /* Centers buttons in the container */
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 16px; /* Reduced padding */
+    margin: 5px; /* Keep margin to prevent elements from touching */
+    background-color: #f4f4f4; /* Light grey background */
+    color: #000; /* Text color */
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; /* Slightly smaller font size */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: #ddd; /* Darker background on hover */
+    color: #444; /* Darker text on hover */
+}
+
+.book-consultation {
+    background-color: salmon; /* Green background */
+    color: white; /* White text */
+}
+
+.send-email {
+    background-color: #008CBA; /* Blue background */
+    color: white; /* White text */
+}
+

@@ -1,0 +1,387 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../img/homepage-background.png'); /* Sets the background image */
+    background-size: cover; /* Covers the full viewable area */
+    background-position: center; /* Center the background image */
+    background-attachment: scroll; /* Fixed background during scrolling */
+    min-height: 100vh; /* Minimum height to 100% of the viewport height */
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3em; /* Adjust size as needed */
+    margin-top: 20px; /* Space above the heading */
+}
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em; /* Smaller than H1 by 15% */
+    text-align: center;
+    margin-top: 90px;
+}
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em; /* Smaller than H1 by 15% */
+    text-align: center;
+    margin-top: 90px;
+}
+h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em; /* Smaller than H1 by 15% */
+    margin-top: 90px;
+    background-color: yellow;
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin-top: 10px;
+    padding: 0 7em; /* Adds 20em padding on both sides */
+    font-size: 1.2em;
+}
+
+
+.navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border: .1px solid white /* Adds a solid black border */
+}
+
+.logo, .hamburger img {
+    height: 4em; /* This sets both the logo and the hamburger icon to the same height */
+}
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 6em;;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0; /* Removes padding to ensure alignment */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 60px; /* Adjust this based on your actual navbar height */
+    width: 100%;
+    text-align: center;
+}
+
+.nav-link {
+    display: block;
+    color: blue;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    background-color: #f0f0f0;
+}
+
+.homepage-content {
+    text-align: center; /* Centers all text and images */
+    max-width: 800px; /* Adjust based on design preference */
+    margin: 0 auto; /* Center the content block */
+    padding: 20px; /* Adds padding around the content */
+}
+.homepage-content p {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin-top: 10px;
+    padding: 0 7em; /* Adds 20em padding on both sides */
+    font-size: 2em;
+}
+
+.hero-photo {
+    width: 100%; /* Makes the image responsive */
+    max-width: 200px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+}
+
+
+.homepage-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em; /* Adjust size as needed */
+    margin-top: 20px; /* Space above the heading */
+}
+
+.homepage-content p {
+    font-family: 'Montserrat', sans-serif;
+    color: #333; /* Dark grey text color */
+    margin-top: 10px; /* Space above the paragraph */
+    font-size: 0.9em;
+    line-height:1.3em;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-around; /* Evenly spaces the two buttons */
+    margin-top: 20px; /* Space above the button container */
+}
+
+.button {
+    cursor: pointer; /* Indicates the images are clickable */
+    width: 48%; /* Each button takes up nearly half of the container */
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 16px; /* Reduced padding */
+    margin: 5px; /* Keep margin to prevent elements from touching */
+    background-color: #f4f4f4; /* Light grey background */
+    color: #000; /* Text color */
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; /* Slightly smaller font size */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: #ddd; /* Darker background on hover */
+    color: #444; /* Darker text on hover */
+}
+
+.book-consultation {
+    background-color: salmon; /* Green background */
+    color: white; /* White text */
+}
+.play-now{
+    background-color: salmon; /* Green background */
+    color: white; /* White text */
+}
+.about-me{
+    background-color: forestgreen; /* Green background */
+    color: white; /* White text */
+}
+
+.send-email {
+    background-color: #008CBA; /* Blue background */
+    color: white; /* White text */
+}
+
+/* New content styling */
+.homepage-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em; /* Smaller than H1 by 15% */
+    text-align: center;
+    margin-top: 90px;
+}
+
+.testimonial-box {
+    background-color: #fff; /* Light background for the testimonial box */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    width: 100%; /* Makes the image responsive */
+    max-width: 500px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    padding: 1EM 1EM;
+    margin-top: 1EM;
+    border-radius: 20px
+    
+}
+
+.testimonial-box p {
+    font-family: 'Montserrat', sans-serif;
+    color: #4f4d4d;
+    line-height: 1.6;
+    font-size: 1em;
+    padding: 1em;
+}
+
+.star-rating img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 200px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    
+}
+
+.testimonial-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em; /* Appropriate size for author name */
+    text-align: center;
+}
+
+.testimonial-box h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .7em; /* Smaller than H2 for occupation */
+    color: black;
+    font-style: italic;
+    text-align: center;
+}
+
+.music-school-stats img{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    width: 100%; /* Makes the image responsive */
+    max-width: 600px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    margin-top: 1EM;
+}
+.centered-tile {
+    width: 100%; /* Makes the image responsive */
+    max-width: 500px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    margin-top: 1EM;
+    border-radius: 20px
+}
+.centered-tile img{
+    width: 100%; /* Makes the image responsive */
+    max-width: 300px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+}
+.centered-tile-background {
+   background:rgba(0,0,255,0.1);
+    width: 100%; /* Makes the image responsive */
+    max-width: 450px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    margin-top: 1EM;
+    border-radius: 20px
+}
+.centered-tile-background img{
+    width: 100%; /* Makes the image responsive */
+    max-width: 400px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    padding-top: 2em;
+}
+ .centered-tile-background p {
+    font-family: 'Montserrat', sans-serif;
+    color: #4f4d4d;
+    line-height: 1.6;
+    font-size: 1em;
+    padding: 1.5em;
+}
+.centered-tile-background-1 {
+    background:rgba(81, 255, 0, 0.1);
+     width: 100%; /* Makes the image responsive */
+     max-width: 450px; /* Maximum width to prevent the image from becoming too large */
+     height: auto; /* Maintains aspect ratio */
+     display: block; /* Ensures the image is a block element */
+     margin: 0 auto; /* Centers the image */
+     margin-top: 1EM;
+     border-radius: 20px
+}
+.centered-tile-background-1 img{
+    width: 100%; /* Makes the image responsive */
+    max-width: 400px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    padding-top: 2em;
+}
+.centered-tile-background-1 p {
+    font-family: 'Montserrat', sans-serif;
+    color: #4f4d4d;
+    line-height: 1.6;
+    font-size: 1em;
+    padding: 1.5em;
+}
+.centered-form {
+    width: 100%; /* Makes the image responsive */
+    max-width: 600px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    margin-top: 1EM;
+}
+.centered-form img{
+    width: 100%; /* Makes the image responsive */
+    max-width: 600px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+}
+.centered-tile-double {
+    width: 100%; /* Makes the image responsive */
+    max-width: 550px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    margin-top: 1.5EM;
+}
+.centered-tile-double img{
+    width: 100%; /* Makes the image responsive */
+    max-width: 600px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    margin-top: 1.2EM;
+}
+
+.container-flexer {
+    background:rgba(81, 255, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 600px; /* Adjust based on your requirement */
+    margin: 20px auto; /* Centering the container */
+    width: 100%; /* Makes the image responsive */
+    max-width: 400px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    padding-top: 1em;
+}
+.container-flexer p{
+    font-family: 'Montserrat', sans-serif;
+    color: #4f4d4d;
+    line-height: 1.6;
+    font-size: 1em;
+    padding: 1.5em;
+}
+
+.row {
+    display: flex; /* Enables flexbox */
+    justify-content: space-between; /* Distributes space evenly between the columns */
+ /* Optional: Adds border around the row */
+}
+
+.column {
+    flex: 1; /* Each column takes equal space */
+    padding: 10px; /* Padding inside each column *//* Visual aid, can be removed or styled as needed */
+    margin: 5px; /* Optional: space between columns */
+}
+
+.centered-tile-full-width {
+    width: 100%; /* Makes the image responsive */
+    max-width: 700px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    margin-top: 1.5EM;
+}
+.centered-tile-full-width img{
+    width: 100%; /* Makes the image responsive */
+    max-width:700px; /* Maximum width to prevent the image from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image */
+    margin-top: 1.2EM;
+}
