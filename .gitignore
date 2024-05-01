@@ -8,9 +8,10 @@
 !*.js
 !*.png
 !.gitignore
-!/html
-!/css
-!/js
-!*/img
-!/img/*/
 
+# Allow specific directories and their subdirectories
+!/html/
+!/css/
+!/js/
+!/img/
+!/img/**/*
