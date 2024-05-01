@@ -1,3 +1,10 @@
+/****************************************
+Author: Fred Butoma
+Hurley Piano New Concept Website
+File: index.css
+ Purpose: Home Page Styling
+*****************************************/
+
 body {
     margin: 0;
     padding: 0;
@@ -512,6 +519,8 @@ footer.contact-footer {
     margin: 5px 0; /* Adds space between links */
     display: flex; /* Aligns icons with text */
     align-items: center; /* Centers items vertically */
+    font-size:x-large;
+    font-weight: 130;
 }
 
 .footer-link i {
