@@ -457,7 +457,7 @@ font-size: 2em;
     margin: 0 auto; /* Centers the container horizontally */
     background-color: rgb(75, 45, 225); /* Sets a distinct background color */
     padding-top: 7.5em; /* Adds space at the top inside the container */
-    padding-bottom: 9em; /* Adds space at the top inside the container */
+    padding-bottom:5em; /* Adds space at the top inside the container */
     max-width: max-content; /* Limits max width to 700px */
     margin: 0 auto; /* Centers the container horizontally */
     background-size: cover; /* Covers the entire area of the div, stretching as needed */
@@ -466,6 +466,7 @@ font-size: 2em;
     padding: 2em 0;  /* Top and bottom padding */
     max-width: 100%; /* Or any other max-width as necessary */
     margin: 0 auto; /* Centers the content */
+
 }
 
 .centered-tile-full-width img {
@@ -554,7 +555,7 @@ font-size: 2em;
 
 /* Purple form  */
 .centered-tile-full-width-purple {
-    padding-top:5em;
+    padding-top:4em;
     margin: 0 auto; /* Centers the container horizontally */
     background-image: url(../img/free-book-form-back-home.png) ;
     background-size: cover; /* Covers the entire area of the div, stretching as needed */
@@ -563,6 +564,7 @@ font-size: 2em;
     padding: 2em 0;  /* Top and bottom padding */
     max-width: 100%; /* Or any other max-width as necessary */
     margin: 0 auto; /* Centers the content */
+    padding-bottom:7em;
 }
 
 
