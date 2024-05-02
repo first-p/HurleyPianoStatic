@@ -50,14 +50,7 @@ p {
     padding: 0 7em; /* Adds 20em padding on both sides */
     font-size: 1.2em;
 }
-img{
-     width: 70%; /* Increase the width as needed */
-    height: auto; /* Maintains aspect ratio */
-    display: block; /* Ensures the image is a block element, which is necessary for margin: auto to work */
-    margin: 1.1em auto 0; /* Shorthand for margin-top: 1.1em, margin-right: auto, margin-bottom: 0, margin-left: auto */
-    padding-top: 0; /* Ensures no padding is adding unnecessary space at the top */
 
-}
 
 .navbar {
     background-color: white;
@@ -187,6 +180,15 @@ img{
     padding-bottom: 20px; /* Adds padding at the bottom of the form */
     background-color: rgba(0, 0, 0, 0.01);
     padding-bottom: 2em;
+
+}
+
+.wide-image img{
+    width: 80%; /* Increase the width as needed */
+   height: auto; /* Maintains aspect ratio */
+   display: block; /* Ensures the image is a block element, which is necessary for margin: auto to work */
+   margin: 1.1em auto 0; /* Shorthand for margin-top: 1.1em, margin-right: auto, margin-bottom: 0, margin-left: auto */
+   padding-top: 0; /* Ensures no padding is adding unnecessary space at the top */
 
 }
 .homepage-content h1 {
