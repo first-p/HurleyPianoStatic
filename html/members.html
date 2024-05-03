@@ -1,0 +1,122 @@
+<!--***************************************
+Author: Fred Butoma
+Hurley Piano New Concept Website
+File: music-lessons.html
+ Purpose: Music Lessons page 
+****************************************/-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurley Piano Website - Music Lessons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/members.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html">  <!-- Link pointing to the homepage -->
+                <img src="../img/logo.png" alt="Logo" class="logo">  <!-- Your logo -->
+            </a>
+            <button class="hamburger" id="hamburger">
+                <img src="../img/hamburger.png" alt="Menu">
+            </button>
+            <ul class="dropdown-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../html/music-lessons.html" class="nav-link">Music Lessons</a>
+                <a href="../html/video-lessons.html" class="nav-link">Video Lessons</a>
+                <a href="../html/about.html" class="nav-link">About</a>
+                <a href="../html/blog.html" class="nav-link">Blog</a>
+                <a href="../html/contact.html" class="nav-link">Contact</a>
+                <a href="https://link.msaascrm.com/widget/bookings/hurley-piano-call-booking" class="nav-link">Book Now</a>
+                <a href="../html/sign-in.html" class="nav-link">Sign In</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Ready to blast off <br>on a learning adventure?</h2>
+        <br><br><br><br><br><br>
+        <div class="signup-form"> 
+            <select id="category-selector" >
+                <option value="toddlers">Toddlers</option>
+                <option value="children">Children</option>
+                <option value="teens">Teens</option>
+                <option value="parents">Parents</option>
+            </select>   
+            
+            <!-- <div class="custom-select-wrapper" onclick="toggleDropdown()" onchange="updateVideoPlayer()">
+                <div class="custom-select">
+                    <div class="custom-select-trigger">Select an option <span class="arrow">&#9662;</span></div>
+                    </div>
+                    <div class="custom-options" style="display: none;">
+                        <span class="custom-option" data-value="option1">Toddlers</span><br><br>
+                        <span class="custom-option" data-value="option2">Children</span><br><br>
+                        <span class="custom-option" data-value="option3">Teens</span><br><br>
+                        <span class="custom-option" data-value="option3">Parents</span><br><br>
+                    </div>
+                </div> -->
+            
+    
+        <!-- <div id="video-container" class="video-container"> -->
+            <div id="video-container" class="video-container" style="display:none;">
+                <video id="video-player" width="100%" height="315" controls>
+                    <source id="video-source" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- <p>▶</p> -->
+        <!-- </div> -->
+
+        <select id="video-selector">
+            <option value="video1">Video 1</option>
+            <option value="video2">Video 2</option>
+            <option value="video3">Video 3</option>
+        </select>
+        <!-- <div class="custom-select-wrapper" onclick="toggleDropdown(this)">
+            <div class="custom-select">
+                <div class="custom-select-trigger">Select a Video <span class="arrow">&#9662;</span></div>
+                <div class="custom-options" style="display: none;">
+                    <span class="custom-option" data-value="video1">Video 1</span>
+                    <span class="custom-option" data-value="video2">Video 2</span>
+                    <span class="custom-option" data-value="video3">Video 3</span>
+                </div>
+            </div>
+        </div> -->
+        
+
+        <br><button id="next-video-button">Next Video</button>
+    </div>
+
+         <br><br><br><br><br><br>
+         <br><br><br>
+
+        <div class="centered-tile-full-width-footer">
+            <footer class="contact-footer">
+                <div class="footer-content">
+                    <a href="https://www.google.com/maps/search/?api=1&query=5209+Duval+Rd,+Austin,+TX+78727" target="_blank" class="footer-link">
+                        <i class="fas fa-map-marker-alt"></i> Address:<br> 5209 Duval Rd, Austin, TX 78727
+                    </a>
+                    <a href="tel:+16315235853" class="footer-link">
+                        <i class="fas fa-phone"></i> Phone:<br> (631) 523-5853
+                    </a>
+                    <a href="mailto:info@hurleypiano.com" class="footer-link">
+                        <i class="fas fa-envelope"></i> Email:<br> info@hurleypiano.com
+                    </a>
+                </div>
+
+            
+            </footer>
+        </div>
+        
+        
+        
+    </main>
+    <script src="../js/script.js"></script>
+    <script src="../js/members.js"></script>
+    
+</body>
+</html>
