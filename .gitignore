@@ -11,6 +11,7 @@
 
 # Allow specific directories and their subdirectories
 !/html/
+!/html/**/*
 !/css/
 !/js/
 !/img/
