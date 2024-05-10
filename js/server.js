@@ -25,6 +25,8 @@ db.connect((err) => {
     console.log('MySQL connected...');
 });
 
+
+//Login endpoint 
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
@@ -49,7 +51,46 @@ app.post('/login', (req, res) => {
     });
 });
 
+// Sign up endpoint
+app.post('/signup', (req, res) => {
+    const { name, username, email, password } = req.body;
+
+    // Check if username or email already exists
+    const checkQuery = 'SELECT * FROM users WHERE username = ? OR email = ?';
+    db.query(checkQuery, [username, email], (err, results) => {
+        if (err) {
+            console.error('Error executing query:', err.stack);
+            return res.status(500).json({ success: false, message: 'Internal server error' });
+        }
+
+        if (results.length > 0) {
+            return res.json({ success: false, message: 'Username or email already exists.' });
+        }
+
+        // Hash the password
+        bcrypt.hash(password, 10, (err, hash) => {
+            if (err) {
+                console.error('Error hashing password:', err.stack);
+                return res.status(500).json({ success: false, message: 'Internal server error' });
+            }
+
+            // Insert new user into the database
+            const insertQuery = 'INSERT INTO users (name, username, email, password) VALUES (?, ?, ?, ?)';
+            db.query(insertQuery, [name, username, email, hash], (err, result) => {
+                if (err) {
+                    console.error('Error inserting user:', err.stack);
+                    return res.status(500).json({ success: false, message: 'Internal server error' });
+                }
+                res.json({ success: true });
+            });
+        });
+    });
+});
+
 app.listen(3000, () => {
     console.log('Server started on port 3000...');
 });
+
+
+
 
