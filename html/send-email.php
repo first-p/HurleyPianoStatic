@@ -15,7 +15,7 @@ $apiKeyFilePath = '../../mail-api.txt';
 
 // Load the API key from the file
 $apiKey = getApiKey($apiKeyFilePath);
-$domain = "sandbox9cbb0eb1fb1d41b183f40f56b53724a0.mailgun.org";
+$domain = "sandboxdc65104b6da0468db96e2741f4c0ebf7.mailgun.org";
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
