@@ -9,12 +9,18 @@ const mailgun = require('mailgun-js');
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors()); // Enable CORS for all routes
+
+// Configure CORS with specific origin if needed
+app.use(cors({
+    origin: 'http://secretbeachsolutions.com', // Change to your domain
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization'
+}));
 
 // Database connection
 const db = mysql.createConnection({
     host: 'localhost', // Replace with your database host
-    user: 'fred_5_10_24', // Replace with your database user
+    user: 'root', // Replace with your database user
     password: 'HdiS*@b82!13', // Replace with your database password
     database: 'newdatabase' // Replace with your database name
 });
@@ -125,7 +131,7 @@ app.post('/request-reset', (req, res) => {
                 subject: 'Password Reset',
                 text: `You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n` +
                       `Please click on the following link, or paste this into your browser to complete the process:\n\n` +
-                      `http://secretbeachsolutions.com/reset/${token}\n\n` +
+                      `http://yourdomain.com/reset/${token}\n\n` +
                       `If you did not request this, please ignore this email and your password will remain unchanged.\n`
             };
 
