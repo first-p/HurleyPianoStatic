@@ -2,21 +2,21 @@ const express = require('express');
 const mysql = require('mysql');
 const bcrypt = require('bcryptjs');
 const bodyParser = require('body-parser');
-const cors = require('cors');
+const cors = require('cors'); // Import cors
 const crypto = require('crypto');
 const mailgun = require('mailgun-js');
 
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());  // Enable CORS for all routes
+app.use(cors()); // Enable CORS for all routes
 
 // Database connection
 const db = mysql.createConnection({
-    host: 'secretbeachsolutions.com',
-    user: 'fred_5_10_24',
-    password: 'HdiS*@b82!13',
-    database: 'newdatabase'
+    host: 'localhost', // Replace with your database host
+    user: 'fred_5_10_24', // Replace with your database user
+    password: 'HdiS*@b82!13', // Replace with your database password
+    database: 'newdatabase' // Replace with your database name
 });
 
 db.connect((err) => {
@@ -125,7 +125,7 @@ app.post('/request-reset', (req, res) => {
                 subject: 'Password Reset',
                 text: `You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n` +
                       `Please click on the following link, or paste this into your browser to complete the process:\n\n` +
-                      `http://localhost:3000/reset/${token}\n\n` +
+                      `http://secretbeachsolutions.com/reset/${token}\n\n` +
                       `If you did not request this, please ignore this email and your password will remain unchanged.\n`
             };
 
