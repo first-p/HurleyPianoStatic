@@ -9,6 +9,7 @@
 !*.js
 !*.png
 !.gitignore
+!*.pdf
 
 # Allow specific directories and their subdirectories
 !/html/
