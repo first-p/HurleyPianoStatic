@@ -4,6 +4,7 @@
 
 #unignore what we want
 !*.html
+!*.php
 !*.css
 !*.js
 !*.png
