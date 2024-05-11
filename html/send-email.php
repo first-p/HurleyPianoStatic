@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Send email with attachment
     $result = $mgClient->messages()->send($domain, $emailData, [
         'attachment' => [
-            ['filePath' => $pdfFilePath, 'filename' => './freebook.pdf', 'freebook.pdf']
+            ['filePath' => $pdfFilePath, 'filename' => '../freebook.pdf', 'freebook.pdf']
         ]
     ]);
 
