@@ -412,6 +412,13 @@ p {
     text-align: center; /* Optionally center the text */
     margin-left: -5em;
 }
+.centered-tile-full-width h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em; /* Smaller than H1 by 15% */
+    text-align: center;
+    color: white;
+    margin-top: 3em;
+}
 /* Inquiry Form for the blue background form template */
 .inquiry-form {
     background: white;
