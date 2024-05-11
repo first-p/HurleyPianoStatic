@@ -16,7 +16,7 @@ const db = mysql.createConnection({
     host: 'secretbeachsolutions.com',
     user: 'fred_5_10_24',
     password: 'HdiS*@b82!13',
-    database: 'mydatabase'
+    database: 'newdatabase'
 });
 
 db.connect((err) => {
