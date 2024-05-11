@@ -1,18 +1,10 @@
-<!--***************************************
-Author: Fred Butoma
-Hurley Piano New Concept Website
-File: music-lessons.html
- Purpose: Music Lessons page 
-****************************************/-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hurley Piano Website - Music Lessons</title>
+    <title>Hurley Piano Website - Sign Up</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <link rel="stylesheet" href="../css/sign-up.css">
 </head>
 <body>
@@ -37,26 +29,10 @@ File: music-lessons.html
         </nav>
     </header>
     <main>
-        <!-- Main content goes here -->
-        <!-- <div class="centered-tile-full-width-purple">
-            <div class="signup-form">
-                <h1>Create Your Account</h1>
-                <form action="#" method="POST">
-                    <input type="text" id="name" name="name" placeholder="NAME">
-                    <input type="text" id="username" name="USERNAME" placeholder="USERNAME">
-                    <input type="email" id="email" name="email" placeholder="EMAIL">
-                    <input type="password" id="password" name="password" placeholder="PASSWORD">
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="CONFIRM PASSWORD">
-                    <button type="submit">Sign Up</button>
-                </form>
-                <p>Already have an account? <a href="sign-in.html">Sign In</a></p>
-            </div>         
-        </div> -->
-
         <div class="centered-tile-full-width-purple">
             <div class="signup-form">
                 <h1>Create Your Account</h1>
-                <form id="signupForm" method="POST">
+                <form id="signupForm" action="signup.php" method="POST">
                     <input type="text" id="name" name="name" placeholder="NAME" required>
                     <input type="text" id="username" name="username" placeholder="USERNAME" required>
                     <input type="email" id="email" name="email" placeholder="EMAIL" required>
@@ -67,44 +43,6 @@ File: music-lessons.html
                 <p>Already have an account? <a href="sign-in.html">Sign In</a></p>
             </div>         
         </div>
-        
-        <script>
-            document.getElementById('signupForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-                const name = document.getElementById('name').value;
-                const username = document.getElementById('username').value;
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
-                const confirmPassword = document.getElementById('confirm-password').value;
-        
-                if (password !== confirmPassword) {
-                    alert('Passwords do not match.');
-                    return;
-                }
-        
-                fetch('http://secretbeachsolutions.com:3000/signup', { // Change to your actual server domain and port
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ name, username, email, password })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        window.location.href = 'sign-in.html';
-                    } else {
-                        alert(data.message);
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('An error occurred.');
-                });
-            });
-        </script>
-        
-        
 
         <div class="centered-tile-full-width-footer">
             <footer class="contact-footer">
@@ -119,13 +57,8 @@ File: music-lessons.html
                         <i class="fas fa-envelope"></i> Email:<br> info@hurleypiano.com
                     </a>
                 </div>
-
-            
             </footer>
         </div>
-        
-        
-        
     </main>
     <script src="../js/script.js"></script>
 </body>
