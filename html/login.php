@@ -22,9 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
-        echo "Debug: Fetched user: " . print_r($user, true) . "<br>";
-        echo "Debug: Input password: " . $inputPassword . "<br>";
-        echo "Debug: Stored hash: " . $user['password'] . "<br>";
+        // echo "Debug: Fetched user: " . print_r($user, true) . "<br>";
+        // echo "Debug: Input password: " . $inputPassword . "<br>";
+        // echo "Debug: Stored hash: " . $user['password'] . "<br>";
         if (password_verify($inputPassword, $user['password'])) {
             session_start();
             $_SESSION['username'] = $inputUsername;
