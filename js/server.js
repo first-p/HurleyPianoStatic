@@ -36,30 +36,30 @@ db.connect((err) => {
 const DOMAIN = "sandbox9cbb0eb1fb1d41b183f40f56b53724a0.mailgun.org";
 const mg = mailgun({apiKey: "YOUR_PRIVATE_API_KEY", domain: DOMAIN});
 
-// Login endpoint 
-app.post('/login', (req, res) => {
-    const { username, password } = req.body;
+// // Login endpoint 
+// app.post('/login', (req, res) => {
+//     const { username, password } = req.body;
 
-    const query = 'SELECT * FROM users WHERE username = ?';
-    db.query(query, [username], (err, results) => {
-        if (err) throw err;
+//     const query = 'SELECT * FROM users WHERE username = ?';
+//     db.query(query, [username], (err, results) => {
+//         if (err) throw err;
 
-        if (results.length > 0) {
-            const user = results[0];
-            bcrypt.compare(password, user.password, (err, isMatch) => {
-                if (err) throw err;
+//         if (results.length > 0) {
+//             const user = results[0];
+//             bcrypt.compare(password, user.password, (err, isMatch) => {
+//                 if (err) throw err;
 
-                if (isMatch) {
-                    res.json({ success: true });
-                } else {
-                    res.json({ success: false, message: 'Incorrect login' });
-                }
-            });
-        } else {
-            res.json({ success: false, message: 'Incorrect login' });
-        }
-    });
-});
+//                 if (isMatch) {
+//                     res.json({ success: true });
+//                 } else {
+//                     res.json({ success: false, message: 'Incorrect login' });
+//                 }
+//             });
+//         } else {
+//             res.json({ success: false, message: 'Incorrect login' });
+//         }
+//     });
+// });
 
 // Sign up endpoint
 app.post('/signup', (req, res) => {
