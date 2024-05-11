@@ -13,7 +13,7 @@ app.use(cors());  // Enable CORS for all routes
 
 // Database connection
 const db = mysql.createConnection({
-    host: 'localhost',
+    host: 'secretbeachsolutions.com',
     user: 'fred_5_10_24',
     password: 'HdiS*@b82!13',
     database: 'mydatabase'
