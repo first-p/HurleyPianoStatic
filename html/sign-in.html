@@ -66,6 +66,7 @@ File: music-lessons.html
                         <br>
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password" required>
+                        <a href="forgot-password.html"> Forgot Password?</a>
                         <br>
                         <button type="submit">Login</button>
                         <p>New here? <br><a href="sign-up.html">Create New Account</a></p>
@@ -80,7 +81,7 @@ File: music-lessons.html
                 const username = document.getElementById('username').value;
                 const password = document.getElementById('password').value;
     
-                fetch('http://localhost:3000/login', {
+                fetch('http://localhost:3000/sign-in', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
