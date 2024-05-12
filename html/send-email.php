@@ -1,5 +1,10 @@
 <?php
-require '../vendor/autoload.php';
+// Display errors for debugging
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+require 'vendor/autoload.php'; // Adjusted path
 use Mailgun\Mailgun;
 
 // Function to load the API key from a file
@@ -11,10 +16,7 @@ function getApiKey($filePath) {
 }
 
 // Path to the file containing the API key
-$apiKeyFilePath = realpath(dirname(__FILE__) . 'mail-api.txt');
-if (!file_exists($apiKeyFilePath)) {
-    die("Error: API key file not found at path: " . $apiKeyFilePath);
-}
+$apiKeyFilePath = 'mail-api.txt';
 
 // Load the API key from the file
 $apiKey = getApiKey($apiKeyFilePath);
