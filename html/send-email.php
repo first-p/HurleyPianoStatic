@@ -19,13 +19,25 @@ $domain = "sandboxdc65104b6da0468db96e2741f4c0ebf7.mailgun.org";
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Debug statement to indicate form submission
+    echo "Form submitted.<br>";
+
     $fullName = $_POST['fullname'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $lessonType = implode(", ", $_POST['lesson_type']); // Convert array to comma-separated string
 
+    // Debug statements to check form data
+    echo "Full Name: $fullName<br>";
+    echo "Email: $email<br>";
+    echo "Phone: $phone<br>";
+    echo "Lesson Type: $lessonType<br>";
+
     // Create a new Mailgun instance
     $mgClient = Mailgun::create($apiKey);
+
+    // Debug statement to indicate Mailgun instance creation
+    echo "Mailgun instance created.<br>";
 
     // Prepare the email data
     $emailData = [
@@ -37,6 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ['filePath' => '/path/to/your/pdf/file.pdf', 'filename' => 'YourLessonInfo.pdf']
         ]
     ];
+
+    // Debug statement to check email data
+    echo "Email data prepared:<br>";
+    print_r($emailData);
 
     // Send the email
     try {
