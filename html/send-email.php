@@ -16,7 +16,7 @@ function getApiKey($filePath) {
 }
 
 // Path to the file containing the API key
-$apiKeyFilePath = '../../mail-api.txt';
+$apiKeyFilePath = 'mail-api.txt';
 
 // Load the API key from the file
 $apiKey = getApiKey($apiKeyFilePath);
