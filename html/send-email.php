@@ -11,7 +11,7 @@ function getApiKey($filePath) {
 }
 
 // Path to the file containing the API key
-$apiKeyFilePath = realpath(dirname(__FILE__) . '/../../mail-api.txt');
+$apiKeyFilePath = realpath(dirname(__FILE__) . '/mail-api.txt');
 if (!file_exists($apiKeyFilePath)) {
     die("Error: API key file not found at path: " . $apiKeyFilePath);
 }
