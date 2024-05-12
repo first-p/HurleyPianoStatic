@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require 'vendor/autoload.php';
 use Mailgun\Mailgun;
 
@@ -53,6 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Debug statement to check email data
     echo "Email data prepared:<br>";
     print_r($emailData);
+    echo "<br>";
 
     // Send the email
     try {
